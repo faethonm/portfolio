@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="section">
+    <h5>Cool stuff im working on</h5>
+    <% @projects.each_slice(3) do |projects_row| %>
+      <div class="row">
+        <div class="col s12 center">
+          <% projects_row.each do |project| %>
+            <div class="col s12 m4 l4 " style = "padding: 0 0.75rem;">
+              <div class= "card small white  hoverable">
+                <br>
+                <div class="card-title">
+                  <p>
+                    <%= link_to project.title, project.url, class: 'indigo-text text-darken-4'%>
+                  </p>
+                  <%= image_tag project.image, class: 'circle valign', size: "100" %>
+                </div>
+                <div class="card-content">
+                  <p class="truncate hide-on-large-only hide-on-small-only"><%= project.description %></p>
+                  <p class="hide-on-med-only"><%= project.description %></p>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

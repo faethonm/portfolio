@@ -1,0 +1,45 @@
+<%= render 'about' %>
+
+<%= render 'dashboard' %>
+
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row ">
+          <div class="caption center-align">
+          <h5 class="header col s12 light center">
+            “It's the possibility of having a dream come true that makes life interesting.”
+          </h5>
+          <h6 class=" header right col offset-s3light light grey-text text-lighten-3">
+            ― Paulo Coelho, The Alchemist
+          </h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="parallax">
+      <%= image_tag @background1, alt: "Unsplashed background img 2", class: 'background-image'%>
+    </div>
+  </div>
+  <div id="projects">
+    <%= render 'projects' %>
+  </div>
+
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row">
+        <div class="caption center-align">
+          <h5 class="header col s12 light">
+          “Remember that you are a Black Swan.”</h5>
+          <h6 class=" header right col offset-s3light">
+            ― Nassim Nicholas Taleb
+          </h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="parallax">
+      <%= image_tag @background2, alt: "Unsplashed background img 3" %>
+    </div>
+  </div>

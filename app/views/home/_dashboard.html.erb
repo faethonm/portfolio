@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="section">
+    <div class="row">
+      <% @dashboard.each do |dash_el| %>
+        <div class="col s12 m4 l4">
+          <div class="card small hoverable white">
+            <div class="icon-block">
+              <h2 class="center brown-text"><i class="material-icons"><%= dash_el[:icon ]%></i></h2>
+            </div>
+            <div class="center">
+              <h5 class="card-title"><%= dash_el[:title]%></h5>
+              <div class="card-content">
+                <p class="truncate hide-on-large-only hide-on-small-only"><%= dash_el[:description]%></p>
+                <p class="hide-on-med-only"><%= dash_el[:description]%></p>
+              </div>
+              <div class="card-action">
+                <%= link_to dash_el[:button_title], 'https://www.dropbox.com/s/3d1jjbt33by5zrm/CV2016.pdf?dl=0', class: "waves-effect waves-light btn indigo center hide-on-med-only" %>
+                <%= link_to 'https://www.dropbox.com/s/3d1jjbt33by5zrm/CV2016.pdf?dl=0', class: "waves-effect waves-light btn indigo center hide-on-large-only hide-on-small-only"  do %>
+                  <i class="material-icons"><%= dash_el[:button_icon]%> </i>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
