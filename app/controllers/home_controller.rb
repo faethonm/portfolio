@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
-  before_action :dashboard, :backgrounds
+  before_action :dashboard, :backgrounds, :resume
 
   def index
     @projects = Project.all
@@ -21,6 +21,7 @@ class HomeController < ApplicationController
   def dashboard
     @dashboard ||= [
       {
+        id: 'resume',
         icon: 'flash_on',
         title: 'Resume',
         description: 'Love what you see in my website and want to know more. Feel free to download my full resume',
@@ -28,6 +29,7 @@ class HomeController < ApplicationController
         button_icon: :open_in_browser
       },
       {
+        id: 'projects',
         icon: 'group',
         title: 'Projects',
         description: 'A shortlist of some of the most interesting projects I am currently working on',
@@ -35,6 +37,7 @@ class HomeController < ApplicationController
         button_icon: 'visibility'
       },
       {
+        id: 'blog',
         icon: 'settings',
         title: 'Blog',
         description: 'I got a lot to say! Checkout my blog',
@@ -42,5 +45,28 @@ class HomeController < ApplicationController
         button_icon: 'forum'
       }
     ]
+  end
+
+  def resume
+    @resume ||= begin
+      {
+        education: [
+          {
+            start_date: 'Oct 09',
+            end_date: 'Jun 13',
+            school: 'Imperial College London',
+            course: 'MEng Computing',
+            grade: "72.8% First Class Honors"
+          },
+          {
+            start_date: 'Oct 09',
+            end_date: 'Jun 13',
+            school: 'Agios Nicolaos Lyceum Cyprus',
+            course: 'School Leaving Certificate',
+            grade: "19.44/20"
+          }
+        ]
+      }
+    end
   end
 end

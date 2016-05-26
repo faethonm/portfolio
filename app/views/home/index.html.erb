@@ -1,6 +1,12 @@
-<%= render 'about' %>
-
 <%= render 'dashboard' %>
+<%= render 'about' %>
+<section>
+  <div id="projects">
+    <%= render 'projects' %>
+  </div>
+</section>
+
+
 
   <div class="parallax-container valign-wrapper">
     <div class="section no-pad-bot">
@@ -21,10 +27,9 @@
       <%= image_tag @background1, alt: "Unsplashed background img 2", class: 'background-image'%>
     </div>
   </div>
-  <div id="projects">
-    <%= render 'projects' %>
+  <div id="resume">
+    <%= render 'resume' %>
   </div>
-
   <div class="parallax-container valign-wrapper">
     <div class="section no-pad-bot">
       <div class="container">
@@ -43,3 +48,9 @@
       <%= image_tag @background2, alt: "Unsplashed background img 3" %>
     </div>
   </div>
+
+<div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+    <%= link_to  "#top", class: "btn-floating btn-large indigo" do %>
+      <i class="large material-icons">open_in_browser</i>
+    <% end %>
+</div>
